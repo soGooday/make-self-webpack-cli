@@ -15,12 +15,12 @@ const _packingType = {
 //被打包的项目类型
 const objType={
     G:'G',
-    GFileName:`${path.resolve(__dirname,'../')}/interactiveActivities`,//G类型的项目路径
+    GFileName:`${path.resolve(__dirname,'../')}/GameV`,//G类型的项目路径
 }
 //打包要使用的相关参数
 const buildConfig={
-    testDistPath:`${path.resolve(__dirname,'../')}\\dist.test`,//测试环境打包的路径
-    proDistPath:`${path.resolve(__dirname,'../')}\\dist.pro`,//生产环境的打包路径
+    testDistPath:`${path.resolve(__dirname,'../')}\\dist.test\\dist`,//测试环境打包的路径
+    proDistPath:`${path.resolve(__dirname,'../')}\\dist.pro\\dist`,//生产环境的打包路径
 
 }
 

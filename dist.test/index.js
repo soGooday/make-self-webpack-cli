@@ -81,31 +81,31 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./interactiveActivities/src/G2020Y/G001/G001-1/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./GameV/src/G2020Y/G001/G001-1/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./interactiveActivities/src/G2020Y/G001/G001-1/index.css":
-/*!****************************************************************!*\
-  !*** ./interactiveActivities/src/G2020Y/G001/G001-1/index.css ***!
-  \****************************************************************/
+/***/ "./GameV/src/G2020Y/G001/G001-1/index.css":
+/*!************************************************!*\
+  !*** ./GameV/src/G2020Y/G001/G001-1/index.css ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./interactiveActivities/src/G2020Y/G001/G001-1/index.css?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./GameV/src/G2020Y/G001/G001-1/index.css?");
 
 /***/ }),
 
-/***/ "./interactiveActivities/src/G2020Y/G001/G001-1/index.js":
-/*!***************************************************************!*\
-  !*** ./interactiveActivities/src/G2020Y/G001/G001-1/index.js ***!
-  \***************************************************************/
+/***/ "./GameV/src/G2020Y/G001/G001-1/index.js":
+/*!***********************************************!*\
+  !*** ./GameV/src/G2020Y/G001/G001-1/index.js ***!
+  \***********************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./interactiveActivities/src/G2020Y/G001/G001-1/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\n\r\nconsole.log('hello world +++++1111');\r\n\n\n//# sourceURL=webpack:///./interactiveActivities/src/G2020Y/G001/G001-1/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./GameV/src/G2020Y/G001/G001-1/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\n\r\nconsole.log('hello world +++++1111');\r\n\n\n//# sourceURL=webpack:///./GameV/src/G2020Y/G001/G001-1/index.js?");
 
 /***/ })
 
