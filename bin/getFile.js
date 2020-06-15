@@ -11,10 +11,10 @@ module.exports = {
     /**
      * 通过递归知道到相应文件路径
      * @param {string} dirname 路径
-     * @param {string} targeName 目标！！文件的名字！！
+     * @param {string} targeFileName 目标！！文件的名字！！
      */
-    raedFile(dirname,targeName){ 
-        let resPath =  this.finObjPath(dirname,targeName);
+    raedFile(dirname,targeFileName){ 
+        let resPath =  this.finObjPath(dirname,targeFileName);
         resPath = resPath[0] 
         //文件路径的集合
         let specificPath = null;
@@ -48,10 +48,10 @@ module.exports = {
     /**
      * 通过递归知道到相应文件路径
      * @param {string} dirname 路径
-     * @param {string} targeName 目标！！文件的名字！！
+     * @param {string} targeFileName 目标！！文件的名字！！
      * @return 返回的文件的一个路径
      */
-    finObjPath(dirname,targeName){
+    finObjPath(dirname,targeFileName){
         // console.time('glob');
         let res = glob.sync(dirname+'/**/*');
         // console.timeEnd('glob');
@@ -59,7 +59,7 @@ module.exports = {
         // console.log('res:',res);
         let resPath = res.filter(itme=>{
             // console.log('itme',itme,/G001-1$/.test(itme));
-            return new RegExp(`${targeName}$`).test(itme)
+            return new RegExp(`${targeFileName}$`).test(itme)
         })
         // console.timeEnd('glob1');
         return resPath;
@@ -71,37 +71,6 @@ module.exports = {
     }
 }; 
 
-
-
-    /**
-     * 通过递归知道到相应文件路径
-     * @param {string} dirname 路径
-     * @param {string} targeName 目标！！文件的名字！！
-     */
-    // raedFile(dirname,targeName){ 
-    //     let resPath =  this.finObjPath(dirname,targeName);
-    //     resPath = resPath[0] 
-    //     let specificPath = null;
-    //     //通过指定的路径 读取下面的文件
-    //     fs.readdir(resPath , (err, files) => {
-    //         if (err)
-    //             throw err; 
-    //             // console.log('--files--',files);
-    //         //将读取出来文件遍历
-    //         files.forEach(file => { 
-    //             let filePath = path.normalize(resPath + '/' + file); 
-    //             // console.log('--filePath--',filePath);
-    //             //检测每个文件是文件夹还是具体的文件
-    //             fs.stat(filePath, (err, stats) => {
-    //                 if (stats.isFile()) {
-    //                     console.log(filePath + ' is: ' + 'file'); 
-    //                 }
-    //                 if (stats.isDirectory()) {
-    //                     console.log(filePath + ' is: ' + 'dir');
-    //                 }
-    //             })
-    //         })
-    //     })
-
+ 
 
 

@@ -8,6 +8,8 @@ const middleware = require('webpack-dev-middleware');
 const webpack = require('webpack');
 //打开浏览器
 const opn = require('opn');
+//改变颜色
+const chalk = require("chalk"); 
 
 //开启本地服务器一些参数
 const severConfig = {
@@ -37,10 +39,10 @@ module.exports = {
         //得到webpack编译过的webapckConfig
         let compiler = webpack(options);        
         app.use(middleware(compiler));
-         // 启动服务，其中的端口号需要按照projectName来设置
+         // 启动服务
         app.listen(severConfig.devPort, () => console.log(`项目已启动，端口号为：${severConfig.devPort}!`));
         opn(`http://${severConfig.devIP}:${severConfig.devPort}/index.html`)
-        console.log('当前的地址是:',`http://${severConfig.devIP}:${severConfig.devPort}/index.html`)
+        console.log('当前的地址是:',  chalk.green(`http://${severConfig.devIP}:${severConfig.devPort}/index.html`));
     }
 
 
