@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+button{
+    width: 100px;
+    height: 100px; 
+    background-color: red;
+    transform: rotate(10deg);
+}
+.img-gif{
+    width: 100px;
+    height: 100px;
+    background-image: url("./image/picMadeByMatools.gif");
+}
+#head-img-box{
+    img{
+        width: 18.75rem;
+    }
+ 
+}

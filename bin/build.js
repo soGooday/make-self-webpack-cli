@@ -17,12 +17,12 @@ const _packingType = {
  * TYPE 是被打包文件的开头
  * FileName 被打包的文件的目录 FileName下的目录 是src/你要打包的文件
  */
-let objType = [{
+const objType = [{
         TYPE: 'G',
         FileName: `${path.resolve(__dirname, '../')}/GameV`,//G类型的项目路径
     },{
         TYPE: 'L',
-        FileName: `${path.resolve(__dirname, '../')}/LDActivity`,//G类型的项目路径
+        FileName: `${path.resolve(__dirname, '../')}/src/L`,//L类型的项目路径
     }
 ]
 
@@ -49,7 +49,7 @@ module.exports = {
         option = { ...option, modeType };
         this.getTargetParh(option, _webpackConfig => {
             //使用上述webPack的配置执行webpack打包工具
-            this.buildPack(_webpackConfig);
+            this.buildPack(_webpackConfig,option);
         });
     },
     /**
@@ -138,9 +138,12 @@ module.exports = {
      * 将指定文件使用webpack打包
      * @param {object} webpackConfig 
      */
-    buildPack(webpackConfig) {
+    buildPack(webpackConfig,option) {
+        // console.log('option:',option)
+        let {objName,packingType,modeType} = option;
         //开始执行
         webpack(webpackConfig, function (err, stats) {
+        
             //打印相关参数
             process.stdout.write(stats.toString() + '\n');
             // 如果打印失败，则抛出错误
@@ -150,6 +153,8 @@ module.exports = {
                 console.log(chalk.red('Build failed with errors.\n'))
                 // 退出node程序
                 process.exit(1)
+            }else{
+                console.log(chalk.green(`被打包的文件名称:${objName}\n打包的模式：${packingType} -- ${modeType}\n状态：打包成功！`)) 
             }
         });
     },

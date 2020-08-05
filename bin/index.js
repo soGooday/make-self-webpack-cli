@@ -44,12 +44,12 @@ const init = (argv)=> {
 } 
 init(process.argv.slice(2));
 /****
- * 王峰 630759294@qq.com
+ * 
  * 指令输入的格式
  * ***************************
  * 打包指令格式
- * bxmiv build G001-1 -t
- * bxmiv 开头指令
+ * bxmil build G001-1 -t
+ * bxmil 开头指令
  * build 当前是打包工程
  * G001-1当前需要打包的工程
  * -t 打成测试包 -p打成正式服的包
@@ -57,9 +57,6 @@ init(process.argv.slice(2));
  * 开启本地测试服务器
  * bxmiv server G001-1
  * bxmiv 开头指令
- * server 开始本地服务器
- * G001-1 打开工程G001-1
- * 
- * 
- * 
+ * dev 开始本地服务器
+ * G001-1 打开工程G001-1 
  */
