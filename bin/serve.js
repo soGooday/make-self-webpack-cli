@@ -13,7 +13,7 @@ const chalk = require("chalk");
 
 //开启本地服务器一些参数
 const severConfig = {
-    devPort:8080,
+    devPort:9005,
     devIP:'localhost'
 }
 
@@ -25,7 +25,7 @@ module.exports = {
     initData(options){
         let {objName} = options; 
         build.getWebapckConfig(options,res=>{
-            console.log('res:',res);
+            console.log('res-----:',res);
             this.openLocalServer(res);
         })  
     }, 
@@ -33,7 +33,7 @@ module.exports = {
      * 开启本地的服务器
      * @param {object} options  wwebpack的设置
      */
-    openLocalServer(options){
+    openLocalServer(options){ 
         // 创建express实例
         const app = express();
         //得到webpack编译过的webapckConfig
@@ -43,8 +43,5 @@ module.exports = {
         app.listen(severConfig.devPort, () => console.log(`项目已启动，端口号为：${severConfig.devPort}!`));
         opn(`http://${severConfig.devIP}:${severConfig.devPort}/index.html`)
         console.log('当前的地址是:',  chalk.green(`http://${severConfig.devIP}:${severConfig.devPort}/index.html`));
-    }
-
-
-
+    } 
 }

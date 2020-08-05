@@ -35,15 +35,16 @@ const init = (argv)=> {
 		// packingType=(-t|-p)
 		// objName项目的名称  
 		build.initData({objName,packingType}); 
-	} else if (instructions === 'server' || instructions === '--server') {  
+	} else if (instructions === 'dev' || instructions === '--dev') {  
 		//将需要启动的服务器的文件名称写出来
-		// console.log('使用了服务器了:');
+		console.log('使用了服务器了:');
 		server.initData({objName});
 	} 
 
 } 
 init(process.argv.slice(2));
 /****
+ * 王峰 630759294@qq.com
  * 指令输入的格式
  * ***************************
  * 打包指令格式

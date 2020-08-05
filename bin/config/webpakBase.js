@@ -20,8 +20,7 @@ module.exports = function(opntion) {
                 rules:[{
                     test:/\.css$/,
                     exclude:/node_modules/,
-                    use:[MiniCssExtractPlugin.loader,'css-loader']
-                    // use:['style-loader','css-loader']
+                    use:[MiniCssExtractPlugin.loader,'css-loader'] 
                 }]
             },
             plugins:[
